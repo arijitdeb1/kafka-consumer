@@ -1,0 +1,19 @@
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:29095
+      key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      group-id: customer-consumer-group
+
+server:
+  port: 8088
+
+topic:
+  name: customer-topic
+
+consumer:
+  instance: 1
+
+retry:
+  attempts: 3
